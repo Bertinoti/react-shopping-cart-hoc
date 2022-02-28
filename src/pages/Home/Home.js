@@ -1,10 +1,11 @@
 import React from "react";
 
-import AppHeader from "../../components/AppHeader";
-import Main from "../../components/Main";
-import Footer from "../../components/Footer";
+// import AppHeader from "../../components/AppHeader";
+// import Main from "../../components/Main";
+// import Footer from "../../components/Footer";
 import ProductsListing from "../../components/ProductsListing";
 import Cart from "../../components/Cart";
+import withLayout from "../../hoc/withLayout";
 
 /**
  * Remove the following components from the component:
@@ -28,8 +29,6 @@ function Home({
 }) {
   return (
     <>
-      <AppHeader />
-      <Main className="container-fluid">
         <div className="row">
           <div className="col col-8">
             <div className="row">
@@ -77,8 +76,6 @@ function Home({
             handleChange={handleChange}
           />
         </div>
-      </Main>
-      <Footer />
     </>
   );
 }
@@ -87,4 +84,4 @@ function Home({
  * Export default the Home by wrapping it in the withLayout hoc
  * export default withLayout(Home);
  */
-export default Home;
+export default withLayout(Home);
